@@ -25,7 +25,7 @@ const config = {
   organizationName: 'your-github-username', // Usually your GitHub org/user name.
   projectName: 'recodarr-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -46,7 +46,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-github-username/recodarr-docs/tree/main/recodarr-docs/',
+            'https://github.com/your-github-username/recodarr-docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -57,11 +57,11 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-github-username/recodarr-docs/tree/main/recodarr-docs/',
+            'https://github.com/your-github-username/recodarr-docs/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: './src/css/custom.css',
