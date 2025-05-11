@@ -4,7 +4,8 @@ facebook:
   description: Facebook tag description
 
 hello:
-  name: hello
+  label: Hello
+  permalink: /hello
   description: Greeting and introduction posts
 
 docusaurus:
@@ -18,9 +19,11 @@ hola:
   description: Hola tag description
 
 recodarr:
-  name: recodarr
+  label: Re:Cod|Arr
+  permalink: /recodarr
   description: Posts about Re:Cod|Arr updates and features
 
 documentation:
-  name: documentation
+  label: Documentation
+  permalink: /documentation
   description: Posts about documentation updates and changes
