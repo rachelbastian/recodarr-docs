@@ -1,0 +1,42 @@
+---
+slug: welcome-to-recodarr-docs
+title: Welcome to Re:Cod|Arr Documentation
+authors: [admin]
+tags: [hello, recodarr, documentation]
+---
+
+# Welcome to the Re:Cod|Arr Documentation
+
+We're excited to launch the official documentation site for Re:Cod|Arr! This site will serve as the central hub for all information related to installing, configuring, and using Re:Cod|Arr.
+
+## What's Included
+
+Our documentation currently covers:
+
+- Installation guides for various platforms
+- Basic configuration
+- User guides for common tasks
+- Troubleshooting tips
+
+## Future Updates
+
+We plan to continuously improve and expand our documentation. Some upcoming additions include:
+
+- Advanced configuration tutorials
+- Detailed API documentation
+- Integration guides for other applications
+- Video tutorials
+
+## Get Involved
+
+Your feedback is essential to making this documentation as helpful as possible. If you find any issues or have suggestions for improvements, please:
+
+1. Submit issues on our [GitHub repository](https://github.com/your-github-username/recodarr-docs)
+2. Contribute directly by submitting pull requests
+3. Join discussions in our community channels
+
+We're committed to providing comprehensive, up-to-date documentation for Re:Cod|Arr, and we're thrilled to have you along for the journey.
+
+Happy organizing!
+
+The Re:Cod|Arr Team 
