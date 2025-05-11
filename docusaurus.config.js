@@ -22,10 +22,10 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-github-username', // Usually your GitHub org/user name.
+  organizationName: 'recodarr', // Usually your GitHub org/user name.
   projectName: 'recodarr-docs', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -35,7 +35,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  
   presets: [
     [
       'classic',
@@ -46,22 +46,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-github-username/recodarr-docs/tree/main/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-github-username/recodarr-docs/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'ignore',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -88,9 +80,9 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Updates', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/your-github-username/recodarr-docs',
+            href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -103,7 +95,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Getting Started',
+                label: 'Documentation',
                 to: '/docs/intro',
               },
             ],
@@ -112,12 +104,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'GitHub Discussions',
-                href: 'https://github.com/your-github-username/recodarr-docs/discussions',
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
-                label: 'Issues',
-                href: 'https://github.com/your-github-username/recodarr-docs/issues',
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
@@ -125,12 +121,12 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Updates',
+                label: 'Blog',
                 to: '/blog',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/your-github-username/recodarr-docs',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
@@ -142,6 +138,23 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+    
+  // Add this for Vite integration
+  plugins: [
+    async function tailwindPlugin(context, options) {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configureWebpack(config, isServer, utils) {
+          return {
+            mergeStrategy: { 'resolve.extensions': 'prepend' },
+            resolve: {
+              extensions: ['.js', '.jsx', '.ts', '.tsx', '.mjs'],
+            },
+          };
+        },
+      };
+    },
+  ],
 };
 
 export default config;
